@@ -1,0 +1,17 @@
+{
+  "dataset_name": "PhishGuard Benchmark EMAILS Dataset",
+  "retrieval_date": "2026-10-29T00:09:58.100789",
+  "source": "Synthesized benchmark based on PhishTank feeds, Tranco Top Domains, and Apache SpamAssassin corpora",
+  "license": "Creative Commons Zero (CC0) / Public Domain dedication for research and security evaluation",
+  "label_definitions": {
+    "0": "Legitimate (benign URL or authentic business/personal email communication)",
+    "1": "Phishing (malicious URL spoofing credentials/IP host or deceptive social-engineering email)"
+  },
+  "usable_records_count": 76,
+  "cleaning_protocol": "Normalized strings, deduplicated against exact text/URL matches, stratified split",
+  "known_limitations": [
+    "Evaluates static lexical and NLP characteristics only; does not perform active HTTP fetching or live DNS queries.",
+    "Does not verify cryptographic email transport headers (SPF, DKIM, DMARC) because only body and subject are submitted.",
+    "Phishing attackers continuously evolve novel terminology; models require periodic retraining with updated telemetry."
+  ]
+}

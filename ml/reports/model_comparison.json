@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-10-29T23:17:09.040160",
+  "url_classifier": {
+    "selected_model": "Logistic Regression with L2 Regularization & Feature Scaling",
+    "version": "v1.0.0-logreg-url",
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "confusion_matrix": {
+        "true_negatives": 71,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "true_positives": 47,
+        "matrix_2x2": [
+          [
+            71,
+            0
+          ],
+          [
+            0,
+            47
+          ]
+        ]
+      },
+      "per_class": {
+        "legitimate": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 71
+        },
+        "phishing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 47
+        }
+      }
+    },
+    "candidates_cv": [
+      {
+        "model_name": "Logistic Regression (Baseline)",
+        "cv_accuracy": 0.9979,
+        "cv_precision": 1.0,
+        "cv_recall": 0.9946,
+        "cv_f1": 0.9973,
+        "test_accuracy": 1.0,
+        "test_f1": 1.0,
+        "test_precision": 1.0,
+        "test_recall": 1.0,
+        "selected": true
+      },
+      {
+        "model_name": "Random Forest Classifier",
+        "cv_accuracy": 1.0,
+        "cv_precision": 1.0,
+        "cv_recall": 1.0,
+        "cv_f1": 1.0,
+        "test_accuracy": 1.0,
+        "test_f1": 1.0,
+        "test_precision": 1.0,
+        "test_recall": 1.0,
+        "selected": false
+      },
+      {
+        "model_name": "Linear SVM (Calibrated)",
+        "cv_accuracy": 0.9979,
+        "cv_precision": 1.0,
+        "cv_recall": 0.9946,
+        "cv_f1": 0.9973,
+        "test_accuracy": 1.0,
+        "test_f1": 1.0,
+        "test_precision": 1.0,
+        "test_recall": 1.0,
+        "selected": false
+      }
+    ]
+  },
+  "email_classifier": {
+    "selected_model": "TF-IDF N-Gram Vectorizer (1-2) with Logistic Regression",
+    "version": "v1.0.0-tfidf-logreg-email",
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "confusion_matrix": {
+        "true_negatives": 8,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "true_positives": 8,
+        "matrix_2x2": [
+          [
+            8,
+            0
+          ],
+          [
+            0,
+            8
+          ]
+        ]
+      },
+      "per_class": {
+        "legitimate": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 8
+        },
+        "phishing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 8
+        }
+      }
+    },
+    "candidates_cv": [
+      {
+        "model_name": "TF-IDF + Logistic Regression",
+        "cv_accuracy": 1.0,
+        "cv_precision": 1.0,
+        "cv_recall": 1.0,
+        "cv_f1": 1.0,
+        "test_accuracy": 1.0,
+        "test_f1": 1.0,
+        "test_precision": 1.0,
+        "test_recall": 1.0,
+        "selected": true
+      },
+      {
+        "model_name": "TF-IDF + Linear SVM (SGD)",
+        "cv_accuracy": 0.9833,
+        "cv_precision": 1.0,
+        "cv_recall": 0.9667,
+        "cv_f1": 0.9818,
+        "test_accuracy": 1.0,
+        "test_f1": 1.0,
+        "test_precision": 1.0,
+        "test_recall": 1.0,
+        "selected": false
+      },
+      {
+        "model_name": "TF-IDF + Multinomial Naive Bayes",
+        "cv_accuracy": 0.9833,
+        "cv_precision": 0.9714,
+        "cv_recall": 1.0,
+        "cv_f1": 0.9846,
+        "test_accuracy": 1.0,
+        "test_f1": 1.0,
+        "test_precision": 1.0,
+        "test_recall": 1.0,
+        "selected": false
+      }
+    ]
+  }
+}

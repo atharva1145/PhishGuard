@@ -1,0 +1,22 @@
+{
+  "pipeline_version": "1.0.0",
+  "last_trained_at": "2026-10-29T23:17:09.046276",
+  "models": {
+    "url_detector": {
+      "file": "url_detector.joblib",
+      "version": "v1.0.0-logreg-url",
+      "algorithm": "Logistic Regression with L2 Regularization & Feature Scaling",
+      "features_count": 24,
+      "test_accuracy": 1.0,
+      "test_f1": 1.0
+    },
+    "email_detector": {
+      "file": "email_detector.joblib",
+      "version": "v1.0.0-tfidf-logreg-email",
+      "algorithm": "TF-IDF N-Gram Vectorizer (1-2) with Logistic Regression",
+      "vocabulary_size": 653,
+      "test_accuracy": 1.0,
+      "test_f1": 1.0
+    }
+  }
+}

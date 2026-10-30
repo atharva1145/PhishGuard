@@ -1,0 +1,96 @@
+{
+  "model_type": "url_classifier",
+  "model_version": "v1.0.0-logreg-url",
+  "algorithm": "Logistic Regression with L2 Regularization & Feature Scaling",
+  "evaluated_at": "2026-10-29T23:17:07.195865",
+  "dataset_summary": {
+    "total_records": 587,
+    "train_records": 469,
+    "test_records": 118,
+    "class_distribution": {
+      "train_legitimate": 284,
+      "train_phishing": 185,
+      "test_legitimate": 71,
+      "test_phishing": 47
+    }
+  },
+  "evaluation_protocol": "Stratified 80/20 train/test split. Fitted scaler and feature parameters strictly on training split. Leakage asserted with zero intersection of URLs.",
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.0,
+    "confusion_matrix": {
+      "true_negatives": 71,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_positives": 47,
+      "matrix_2x2": [
+        [
+          71,
+          0
+        ],
+        [
+          0,
+          47
+        ]
+      ]
+    },
+    "per_class": {
+      "legitimate": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 71
+      },
+      "phishing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 47
+      }
+    }
+  },
+  "model_comparison": [
+    {
+      "model_name": "Logistic Regression (Baseline)",
+      "cv_accuracy": 0.9979,
+      "cv_precision": 1.0,
+      "cv_recall": 0.9946,
+      "cv_f1": 0.9973,
+      "test_accuracy": 1.0,
+      "test_f1": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "selected": true
+    },
+    {
+      "model_name": "Random Forest Classifier",
+      "cv_accuracy": 1.0,
+      "cv_precision": 1.0,
+      "cv_recall": 1.0,
+      "cv_f1": 1.0,
+      "test_accuracy": 1.0,
+      "test_f1": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "selected": false
+    },
+    {
+      "model_name": "Linear SVM (Calibrated)",
+      "cv_accuracy": 0.9979,
+      "cv_precision": 1.0,
+      "cv_recall": 0.9946,
+      "cv_f1": 0.9973,
+      "test_accuracy": 1.0,
+      "test_f1": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "selected": false
+    }
+  ],
+  "misclassified_samples": [],
+  "feature_count": 24
+}

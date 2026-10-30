@@ -1,0 +1,193 @@
+subject,body,label
+Sprint Planning Sync - Thursday at 10:00 AM,"Hi team,
+Please find attached the agenda for our upcoming sprint planning session. We will review our Q3 backlog, assign story points to incoming issues, and discuss frontend performance improvements. Let me know if you need to add any discussion points before Thursday morning.
+Best regards,
+Sarah",0
+GitHub: [PhishGuard/core] Pull Request #14 merged,"Your pull request #14 'Refactor URL feature extraction pipeline' has been reviewed, approved, and merged into the main branch by reviewer alex-dev. All 42 automated unit tests passed on CI. You can safely delete your feature branch.",0
+Your Order #92819 has shipped via UPS Ground,"Dear Customer,
+Thank you for ordering with us. Your package containing the mechanical keyboard has shipped and is scheduled for delivery on Monday. Tracking number: 1Z9999999999999999. You can check package progress in your account dashboard under order history.
+Customer Care Team",0
+Conference Registration Confirmation - PyCon 2026,"Hello Shiva,
+This confirms your registration for PyCon 2026 in Pittsburgh. Your attendee badge will be ready at the registration desk upon presenting this confirmation QR or photo ID. The workshop schedule and speaker tracks are now available on the official conference website.
+Warm regards,
+PyCon Organizing Committee",0
+Monthly Engineering Architecture Town Hall,"Hello everyone,
+Join us for this month's Engineering Town Hall where our platform architects will share lessons learned from migrating our backend microservices to asynchronous worker pools. We will also have 15 minutes of open Q&A at the end.
+Zoom link is in the calendar invitation.
+VP of Engineering",0
+Feedback request on draft project proposal,"Hey Shiva,
+I just finished drafting the technical spec for our new event-driven logging pipeline. Could you take a quick look at section 3 regarding queue durability and backpressure handling? Your insights on edge failure cases would be greatly appreciated.
+Thanks,
+Marcus",0
+Scheduled Database Maintenance Window this Sunday 2:00 AM UTC,"All engineers:
+Please be advised that our primary database cluster will undergo routine minor version upgrades this Sunday between 02:00 and 03:00 UTC. We anticipate approximately 4 minutes of read-only downtime during failover. No customer data or backups will be affected.
+Platform Reliability Team",0
+Weekly Newsletter: AI Advances & Open Source Weekly,"Welcome to issue #88 of AI Weekly. This week we explore efficient parameter fine-tuning, new interpretability methods for deep neural nets, and scikit-learn release highlights. Read the full curated articles on our blog or download the PDF digest.
+Happy reading,
+The Editorial Team",0
+URGENT: Your PayPal Account Has Been Suspended - Action Required Immediately,"Dear Valued Customer,
+We detected unauthorized login attempts to your PayPal account from an unrecognized IP address. For your security, your account has been temporarily restricted. You must verify your credentials and confirm your identity within 24 hours to prevent permanent account termination.
+Click the link below immediately to update your billing information and restore full access:
+http://paypal.com.account-verification.login-service.top/auth/signin.html
+Failure to comply will result in account cancellation.
+PayPal Fraud Prevention Department",1
+CRITICAL ALERT: Microsoft 365 Password Expires in 2 Hours,"Attention User,
+Your corporate Microsoft 365 password is set to expire today. You will lose access to Outlook, Teams, and OneDrive unless you renew your password immediately.
+Keep your current password by validating your identity here:
+http://office365-password-expiration-notice.work/auth/renew
+Please do not ignore this notification as IT helpdesk cannot recover unsaved cloud documents once expired.
+Microsoft IT Support Services",1
+Urgent Wire Transfer Request - Confidential Instruction,"Good morning,
+I am currently in an executive committee meeting and unable to take phone calls. We have an urgent confidential acquisition invoice that must be settled via international wire transfer before end of business today. Please reply immediately with the current balance of our corporate account so I can forward the beneficiary routing details.
+Treat this matter with strict discretion.
+Best,
+Chief Executive Officer",1
+DocuSign: Please review and sign Confidential Settlement Agreement,"Dear Client,
+Legal counsel has submitted a document for your signature: 'Non-Disclosure and Wire Settlement Agreement.pdf'. You have 12 hours remaining to review and execute this agreement.
+View Completed Document:
+http://secure-login-docusign-envelope-review.click/review-document
+Do not share this email. Access is strictly authenticated.",1
+"Internal Revenue Service: Unclaimed Federal Tax Refund of $2,480.00","Official IRS Notification:
+Our calculation records show that you are eligible for an outstanding tax refund of $2,480.00 from tax filing period 2025. Due to incomplete direct deposit details, the refund could not be transmitted.
+Submit your Social Security Number and banking details on the secure refund portal:
+http://irs-tax-refund-claim-portal.click/taxpayer/submit
+IRS Online Refund Bureau",1
+MetaMask Alert: Seed Phrase Verification Needed to Prevent Account Lockout,"Dear Member,
+Due to our recent network smart contract upgrade, all decentralized wallet owners are required to re-authenticate their private 12-word seed recovery phrase. Failure to re-verify will result in permanent loss of all digital tokens and NFT assets.
+Restore and verify your wallet here:
+http://metamask-wallet-seed-restore.online/unlock
+MetaMask Security Protocol",1
+DHL Express: Unsuccessful Delivery Notice - Confirm Address and Pay $2.99 Fee,"Valued Customer,
+Your express parcel #DH-8921-US could not be delivered because the shipping address was incomplete. The package is held at our local sorting facility. Please confirm your home address and submit the redelivery fee of $2.99 via credit card within 48 hours:
+http://dhl-express-package-redelivery-fee.top/tracking/confirm.php
+DHL Logistics International",1
+Congratulations! You have been selected as our Walmart Gift Card Winner!,"Dear Winner,
+You have won a $1,000 Walmart Shopper Gift Card! To claim your reward, click the link below and answer 3 quick consumer survey questions. Provide your credit card details for $1.00 shipping and handling verification. Hurry, this offer expires in 15 minutes!
+Claim Your Prize Here Now!
+Shopper Rewards Network",1
+Code Review for Bugfix in Auth Service,"Hi Shiva,
+I have reviewed your pull request and left two minor comments on the error handling in the API endpoint. Overall the implementation looks clean and test coverage is solid. Please resolve the comments when you have a moment.",0
+Fwd: Code Review for Bugfix in Auth Service,"Forwarding for your review:
+
+Hi Shiva,
+I have reviewed your pull request and left two minor comments on the error handling in the API endpoint. Overall the implementation looks clean and test coverage is solid. Please resolve the comments when you have a moment.",0
+Quarterly Business Review Slide Deck,"Team,
+Attached is the updated presentation for tomorrow's executive review. Please review your respective department slides and ensure the KPI charts reflect our latest metrics.",0
+Fwd: Quarterly Business Review Slide Deck,"Forwarding for your review:
+
+Team,
+Attached is the updated presentation for tomorrow's executive review. Please review your respective department slides and ensure the KPI charts reflect our latest metrics.",0
+Notes from Client Discovery Workshop,Thanks for attending today's discovery call. We gathered all business requirements and will prepare the technical architecture proposal by next Wednesday. Have a great weekend.,0
+Fwd: Notes from Client Discovery Workshop,"Forwarding for your review:
+
+Thanks for attending today's discovery call. We gathered all business requirements and will prepare the technical architecture proposal by next Wednesday. Have a great weekend.",0
+Update regarding scheduled server patch,Operations will perform routine maintenance on our backend search cluster tonight at 11 PM. Expected downtime is under 5 minutes. Let us know if you have questions.,0
+Fwd: Update regarding scheduled server patch,"Forwarding for your review:
+
+Operations will perform routine maintenance on our backend search cluster tonight at 11 PM. Expected downtime is under 5 minutes. Let us know if you have questions.",0
+Lunch and Learn: Introduction to Vector Databases,Join us tomorrow at noon for an interactive workshop on semantic search and vector indexing. Pizza and refreshments will be provided in the cafeteria.,0
+Fwd: Lunch and Learn: Introduction to Vector Databases,"Forwarding for your review:
+
+Join us tomorrow at noon for an interactive workshop on semantic search and vector indexing. Pizza and refreshments will be provided in the cafeteria.",0
+Your receipt for subscription renewal,Your payment for the annual developer cloud subscription was successfully processed. You can download the PDF tax receipt from your account settings.,0
+Fwd: Your receipt for subscription renewal,"Forwarding for your review:
+
+Your payment for the annual developer cloud subscription was successfully processed. You can download the PDF tax receipt from your account settings.",0
+Invitation: Antigravity Architecture Discussion,You are invited to join the monthly technology forum on Tuesday. We will discuss best practices for explainable AI and evaluation metrics.,0
+Fwd: Invitation: Antigravity Architecture Discussion,"Forwarding for your review:
+
+You are invited to join the monthly technology forum on Tuesday. We will discuss best practices for explainable AI and evaluation metrics.",0
+Weekly Status Report - Frontend Modernization,"Here is the summary of tasks completed this week: 10 bugs resolved, 3 new endpoints documented in OpenAPI, and performance benchmarks completed.",0
+Fwd: Weekly Status Report - Frontend Modernization,"Forwarding for your review:
+
+Here is the summary of tasks completed this week: 10 bugs resolved, 3 new endpoints documented in OpenAPI, and performance benchmarks completed.",0
+Design assets uploaded to shared Drive folder,The UX team has uploaded the latest Figma component library. All design tokens are synchronized with our Tailwind CSS theme.,0
+Fwd: Design assets uploaded to shared Drive folder,"Forwarding for your review:
+
+The UX team has uploaded the latest Figma component library. All design tokens are synchronized with our Tailwind CSS theme.",0
+Team Outing Poll and Dinner Reservation,Please cast your vote in the team poll for our quarterly celebration venue by Friday end of day.,0
+Fwd: Team Outing Poll and Dinner Reservation,"Forwarding for your review:
+
+Please cast your vote in the team poll for our quarterly celebration venue by Friday end of day.",0
+Release Notes v2.4.0 Published,We are excited to announce version 2.4.0 of our software is now live on production. Check the changelog for details on newly introduced features.,0
+Fwd: Release Notes v2.4.0 Published,"Forwarding for your review:
+
+We are excited to announce version 2.4.0 of our software is now live on production. Check the changelog for details on newly introduced features.",0
+Interview Schedule: Senior Software Engineer Candidate,Please find the interview schedule for tomorrow's candidate. Let me know if you need any adjustments to the interview panel.,0
+Fwd: Interview Schedule: Senior Software Engineer Candidate,"Forwarding for your review:
+
+Please find the interview schedule for tomorrow's candidate. Let me know if you need any adjustments to the interview panel.",0
+Customer Support Ticket #40291 Resolved,"Your helpdesk inquiry regarding VPN credentials has been resolved. If you experience further issues, reply directly to this ticket.",0
+Fwd: Customer Support Ticket #40291 Resolved,"Forwarding for your review:
+
+Your helpdesk inquiry regarding VPN credentials has been resolved. If you experience further issues, reply directly to this ticket.",0
+Mentorship Program Kickoff Session,Welcome to the engineering mentorship program! You will receive an introduction email connecting you with your mentor shortly.,0
+Fwd: Mentorship Program Kickoff Session,"Forwarding for your review:
+
+Welcome to the engineering mentorship program! You will receive an introduction email connecting you with your mentor shortly.",0
+Workspace policy updates regarding remote work,Please take a few minutes to read the updated remote work guidelines on our internal wiki page.,0
+Fwd: Workspace policy updates regarding remote work,"Forwarding for your review:
+
+Please take a few minutes to read the updated remote work guidelines on our internal wiki page.",0
+URGENT: Suspicious Login Detected from Russia,"We noticed an unauthorized login attempt to your profile from IP 185.220.101.5. If this was not you, click here to secure your account immediately: http://security-verify-login.top/auth. Failure to act within 1 hour will result in total account termination.",1
+[ACTION REQUIRED] URGENT: Suspicious Login Detected from Russia,"WARNING: This is a time-sensitive alert.
+
+We noticed an unauthorized login attempt to your profile from IP 185.220.101.5. If this was not you, click here to secure your account immediately: http://security-verify-login.top/auth. Failure to act within 1 hour will result in total account termination.",1
+Account Security Notice: Immediate Verification Required,Your account requires mandatory security re-validation following our updated privacy policy. Click the link below to enter your password and verify your security questions: http://account-update-portal.xyz/login.,1
+[ACTION REQUIRED] Account Security Notice: Immediate Verification Required,"WARNING: This is a time-sensitive alert.
+
+Your account requires mandatory security re-validation following our updated privacy policy. Click the link below to enter your password and verify your security questions: http://account-update-portal.xyz/login.",1
+Invoice INV-2026-9938 is Overdue - Wire Payment Required,"Dear Accounts Payable,
+Attached is the overdue invoice for consulting services. Please initiate wire transfer to our new banking coordinates today to avoid 15% late penalties. Do not call, please confirm via return email.",1
+[ACTION REQUIRED] Invoice INV-2026-9938 is Overdue - Wire Payment Required,"WARNING: This is a time-sensitive alert.
+
+Dear Accounts Payable,
+Attached is the overdue invoice for consulting services. Please initiate wire transfer to our new banking coordinates today to avoid 15% late penalties. Do not call, please confirm via return email.",1
+Your Apple ID has been locked for security reasons,"Your Apple ID was locked because of too many incorrect password attempts. To unlock your account and preserve your iCloud photos, follow this link and confirm your credit card: http://appleid-security-unlock.click/signin.",1
+[ACTION REQUIRED] Your Apple ID has been locked for security reasons,"WARNING: This is a time-sensitive alert.
+
+Your Apple ID was locked because of too many incorrect password attempts. To unlock your account and preserve your iCloud photos, follow this link and confirm your credit card: http://appleid-security-unlock.click/signin.",1
+Amazon Alert: Unauthorized purchase of iPhone 16 Pro,"A purchase of $1,299.00 was ordered using your Amazon account to an address in Miami, FL. If you did not make this purchase, click here immediately to cancel the charge and dispute the transaction: http://amazon-cancel-order.top/ap/signin.",1
+[ACTION REQUIRED] Amazon Alert: Unauthorized purchase of iPhone 16 Pro,"WARNING: This is a time-sensitive alert.
+
+A purchase of $1,299.00 was ordered using your Amazon account to an address in Miami, FL. If you did not make this purchase, click here immediately to cancel the charge and dispute the transaction: http://amazon-cancel-order.top/ap/signin.",1
+Wells Fargo: Your online access has been temporarily restricted,"Wells Fargo Online Banking has locked your debit card following a flagged transaction. Verify your card number, PIN, and CVV on our secure portal to reactivate: http://wellsfargo-card-verify.buzz/login.",1
+[ACTION REQUIRED] Wells Fargo: Your online access has been temporarily restricted,"WARNING: This is a time-sensitive alert.
+
+Wells Fargo Online Banking has locked your debit card following a flagged transaction. Verify your card number, PIN, and CVV on our secure portal to reactivate: http://wellsfargo-card-verify.buzz/login.",1
+HR Notice: Mandatory Employee Benefits Enrollment Form,All employees must complete the open enrollment benefits form by 5:00 PM today. Failure to submit will result in loss of health coverage. Click here to sign in with your corporate domain credentials: http://hr-portal-benefits.work/login.,1
+[ACTION REQUIRED] HR Notice: Mandatory Employee Benefits Enrollment Form,"WARNING: This is a time-sensitive alert.
+
+All employees must complete the open enrollment benefits form by 5:00 PM today. Failure to submit will result in loss of health coverage. Click here to sign in with your corporate domain credentials: http://hr-portal-benefits.work/login.",1
+Unusual sign-in activity on your corporate email account,"Someone accessed your email account from Chrome on Linux in Frankfurt, Germany. If this was not you, review your recent activity and reset your credentials immediately: http://login-microsoftonline.verify-security.top.",1
+[ACTION REQUIRED] Unusual sign-in activity on your corporate email account,"WARNING: This is a time-sensitive alert.
+
+Someone accessed your email account from Chrome on Linux in Frankfurt, Germany. If this was not you, review your recent activity and reset your credentials immediately: http://login-microsoftonline.verify-security.top.",1
+Crypto Airdrop: Claim 500 USDT Bonus within 24 hours,Congratulations! Your wallet has been selected for the 500 USDT community reward. Connect your decentralized wallet and approve the transaction to claim your reward: http://crypto-usdt-airdrop.bar/claim.,1
+[ACTION REQUIRED] Crypto Airdrop: Claim 500 USDT Bonus within 24 hours,"WARNING: This is a time-sensitive alert.
+
+Congratulations! Your wallet has been selected for the 500 USDT community reward. Connect your decentralized wallet and approve the transaction to claim your reward: http://crypto-usdt-airdrop.bar/claim.",1
+Your Netflix subscription has expired - update credit card,We were unable to validate your monthly payment method for Netflix. Update your credit card details immediately to avoid disruption to your streaming service: http://netflix-billing-resolve.xyz/account.,1
+[ACTION REQUIRED] Your Netflix subscription has expired - update credit card,"WARNING: This is a time-sensitive alert.
+
+We were unable to validate your monthly payment method for Netflix. Update your credit card details immediately to avoid disruption to your streaming service: http://netflix-billing-resolve.xyz/account.",1
+USPS: Package delivery failure - update address,Your delivery was intercepted due to an incomplete apartment number. Pay the $1.50 redelivery fee and confirm your address: http://usps-parcel-redelivery.top/track.,1
+[ACTION REQUIRED] USPS: Package delivery failure - update address,"WARNING: This is a time-sensitive alert.
+
+Your delivery was intercepted due to an incomplete apartment number. Pay the $1.50 redelivery fee and confirm your address: http://usps-parcel-redelivery.top/track.",1
+Notice of Legal Action: Copyright Infringement Penalty,A formal copyright infringement complaint has been filed against your website. View the legal cease and desist notice here: http://legal-notice-infringement.click/document.,1
+[ACTION REQUIRED] Notice of Legal Action: Copyright Infringement Penalty,"WARNING: This is a time-sensitive alert.
+
+A formal copyright infringement complaint has been filed against your website. View the legal cease and desist notice here: http://legal-notice-infringement.click/document.",1
+Payroll Notification: Confirm direct deposit routing number,Human Resources has detected an error in your payroll direct deposit routing number. Re-enter your bank account details before the payroll cutoff: http://payroll-deposit-update.buzz/employee.,1
+[ACTION REQUIRED] Payroll Notification: Confirm direct deposit routing number,"WARNING: This is a time-sensitive alert.
+
+Human Resources has detected an error in your payroll direct deposit routing number. Re-enter your bank account details before the payroll cutoff: http://payroll-deposit-update.buzz/employee.",1
+Bank of America: Security token expired - Reactivate now,Your Bank of America digital security token has expired. Log in to your online banking portal to generate a new token: http://bankofamerica-token-renew.fit/signon.,1
+[ACTION REQUIRED] Bank of America: Security token expired - Reactivate now,"WARNING: This is a time-sensitive alert.
+
+Your Bank of America digital security token has expired. Log in to your online banking portal to generate a new token: http://bankofamerica-token-renew.fit/signon.",1
+Final Notice: Webmail storage quota exceeded 98%,Your email mailbox has exceeded its storage quota limit of 15 GB. Incoming emails will be bounced back to senders. Click here to increase your mailbox quota for free: http://webmail-storage-upgrade.loan/quota.,1
+[ACTION REQUIRED] Final Notice: Webmail storage quota exceeded 98%,"WARNING: This is a time-sensitive alert.
+
+Your email mailbox has exceeded its storage quota limit of 15 GB. Incoming emails will be bounced back to senders. Click here to increase your mailbox quota for free: http://webmail-storage-upgrade.loan/quota.",1
