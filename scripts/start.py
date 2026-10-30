@@ -38,8 +38,9 @@ def main():
 
     print("\n" + "=" * 60)
     print(" [✓] PhishGuard is running!")
-    print(" -> Frontend Dashboard: http://localhost:5173")
-    print(" -> Backend API Docs:   http://127.0.0.1:8000/docs")
+    print(" -> Unified Web Application: http://127.0.0.1:8000")
+    print(" -> Vite Dev Hot-Reload:     http://localhost:5173")
+    print(" -> Backend API Docs:         http://127.0.0.1:8000/docs")
     print(" Press Ctrl+C in this terminal to stop both servers.")
     print("=" * 60 + "\n")
 

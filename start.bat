@@ -12,9 +12,10 @@ start "PhishGuard Frontend" cmd /k "cd frontend && npm run dev"
 
 echo.
 echo ========================================================
-echo [OK] Both services are starting in separate windows!
-echo - Frontend Web UI:  http://localhost:5173
-echo - Backend API Docs: http://127.0.0.1:8000/docs
+echo [OK] PhishGuard is up and running!
+echo - Unified Web Application: http://127.0.0.1:8000
+echo - Vite Dev Hot-Reload:     http://localhost:5173
+echo - Interactive API Docs:    http://127.0.0.1:8000/docs
 echo ========================================================
 echo.
 pause
