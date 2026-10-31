@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { OverviewPage } from './pages/OverviewPage';
 import { UrlScannerPage } from './pages/UrlScannerPage';
+import { BulkScannerPage } from './pages/BulkScannerPage';
 import { EmailScannerPage } from './pages/EmailScannerPage';
 import { EvaluationPage } from './pages/EvaluationPage';
 import { HistoryPage } from './pages/HistoryPage';
@@ -45,6 +46,7 @@ export const App: React.FC = () => {
       <main className="flex-1 w-full px-4 sm:px-6 lg:px-10 py-8">
         {activeTab === 'overview' && <OverviewPage setActiveTab={setActiveTab} />}
         {activeTab === 'url' && <UrlScannerPage />}
+        {activeTab === 'bulk' && <BulkScannerPage />}
         {activeTab === 'email' && <EmailScannerPage />}
         {activeTab === 'evaluation' && <EvaluationPage />}
         {activeTab === 'history' && <HistoryPage />}

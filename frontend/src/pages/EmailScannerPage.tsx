@@ -35,6 +35,21 @@ export const EmailScannerPage: React.FC = () => {
 
   const emailPresets = [
     {
+      title: 'Quishing: 2FA QR Code Trap (High Risk)',
+      subject: 'ACTION REQUIRED: Migrate to Microsoft Authenticator 2FA Verification',
+      body: 'Attention Employee,\nOur IT Security compliance policy has updated mandatory multi-factor authentication (MFA) protocols. You must scan the QR-code below using your mobile authenticator app to verify and re-register your corporate account.\n[Image: Authenticator QR Code]\nPlease point your phone camera at the QR code to authenticate immediately. Failure to complete this 2FA verification within 12 hours will result in suspension of your corporate mailbox and VPN access.\nIT Identity & Security Operations',
+    },
+    {
+      title: 'Executive BEC: Urgent Gift Cards',
+      subject: 'Quick favor - Are you at your desk?',
+      body: 'Hi,\nAre you at your desk right now? I am in a confidential meeting with investors and need you to handle a quick favor for me. Can you purchase 5 Google Play gift cards of $100 each for a client partner promotion? Email me the redemption codes once purchased. I will file an immediate expense reimbursement for you this afternoon.\nTreat this with discretion.\nChief Executive Officer',
+    },
+    {
+      title: 'Payroll Direct Deposit Diversion (BEC)',
+      subject: 'Payroll Direct Deposit Update Request',
+      body: 'Hello HR Payroll Team,\nI have switched to a new banking institution. Could you please update my direct deposit bank routing number and account number for the upcoming payroll disbursement? Please let me know what banking details you need from me so this takes effect for the next pay cycle.\nThank you,\nSenior Director',
+    },
+    {
       title: 'Urgent Account Suspension (Phishing)',
       subject: 'URGENT: Your PayPal Account Has Been Suspended - Action Required Immediately',
       body: 'Dear Valued Customer,\nWe detected unauthorized login attempts from an unknown IP address. Your account has been temporarily restricted. You must verify your credentials and confirm your identity within 24 hours to prevent permanent account termination.\nClick the link below immediately to update your billing information and restore access:\nhttp://paypal.com.account-verification.login-service.top/auth/signin.html\nFailure to comply will result in account cancellation.\nPayPal Fraud Prevention Team',

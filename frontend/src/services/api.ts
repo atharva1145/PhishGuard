@@ -3,7 +3,10 @@ import {
   UrlScanResult,
   EmailScanResult,
   AllMetricsData,
-  HistoryItem
+  HistoryItem,
+  DefangResponse,
+  CounterfactualResult,
+  BatchUrlScanResult
 } from '../types';
 
 const API_BASE = '/api';
@@ -101,6 +104,48 @@ export async function clearAllHistory(): Promise<{ success: boolean; message: st
   });
   if (!resp.ok) {
     throw new Error(`Failed to clear history: status ${resp.status}`);
+  }
+  return resp.json();
+}
+
+export async function defangIndicator(url: string, action: 'defang' | 'refang' = 'defang'): Promise<DefangResponse> {
+  const resp = await fetch(`${API_BASE}/defang`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: url.trim(), action }),
+  });
+  if (!resp.ok) {
+    const errorData = await resp.json().catch(() => ({}));
+    throw new Error(errorData.detail || `Defang request failed with status ${resp.status}`);
+  }
+  return resp.json();
+}
+
+export async function simulateCounterfactual(
+  url: string,
+  modifications: Record<string, boolean>
+): Promise<CounterfactualResult> {
+  const resp = await fetch(`${API_BASE}/scan/url/counterfactual`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: url.trim(), modifications }),
+  });
+  if (!resp.ok) {
+    const errorData = await resp.json().catch(() => ({}));
+    throw new Error(errorData.detail || `Counterfactual simulation failed with status ${resp.status}`);
+  }
+  return resp.json();
+}
+
+export async function scanUrlBatch(urls: string[]): Promise<BatchUrlScanResult> {
+  const resp = await fetch(`${API_BASE}/scan/url/batch`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ urls }),
+  });
+  if (!resp.ok) {
+    const errorData = await resp.json().catch(() => ({}));
+    throw new Error(errorData.detail || `Batch scan failed with status ${resp.status}`);
   }
   return resp.json();
 }

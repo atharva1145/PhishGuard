@@ -155,3 +155,67 @@ def test_scan_email_file_upload_invalid_extension():
         files={"file": ("payload.exe", io.BytesIO(b"MZ..."), "application/octet-stream")}
     )
     assert response.status_code == 400
+
+
+def test_defang_and_refang_endpoint():
+    """Verify SOC indicator defanging and refanging."""
+    # Defang
+    resp = client.post("/api/defang", json={"url": "http://evil-tracker.xyz/login", "action": "defang"})
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "hxxp://" in data["defanged_url"]
+    assert "[.]" in data["defanged_url"]
+    assert data["is_defanged"] is True
+
+    # Refang
+    resp_re = client.post("/api/defang", json={"url": data["defanged_url"], "action": "refang"})
+    assert resp_re.status_code == 200
+    data_re = resp_re.json()
+    assert data_re["raw_url"] == "http://evil-tracker.xyz/login"
+
+
+def test_counterfactual_simulation_endpoint():
+    """Verify What-If simulation recalculates probabilities."""
+    url = "http://192.168.1.1:8080/secure/verify.php?user=123"
+    resp = client.post("/api/scan/url/counterfactual", json={
+        "url": url,
+        "modifications": {
+            "force_https": True,
+            "clean_hostname": True,
+            "standard_port": True,
+            "strip_sensitive_path": True
+        }
+    })
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "counterfactual_probability" in data
+    assert data["counterfactual_probability"] < data["original_probability"]
+    assert len(data["remediated_factors"]) > 0
+
+
+def test_batch_url_scan_endpoint():
+    """Verify bulk threat triage processing."""
+    urls = [
+        "http://paypa1.com/login",
+        "https://github.com/torvalds/linux",
+        "http://192.168.1.1:8080/auth"
+    ]
+    resp = client.post("/api/scan/url/batch", json={"urls": urls})
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["summary"]["total"] == 3
+    assert len(data["results"]) == 3
+    assert data["summary"]["phishing_count"] >= 1
+    assert data["summary"]["legitimate_count"] >= 1
+
+
+def test_quishing_email_detection():
+    """Verify QR code authentication trap heuristic detection."""
+    resp = client.post("/api/scan/email", json={
+        "subject": "Microsoft 365: Mandatory 2FA Authenticator Setup",
+        "body": "Dear Employee, Your two-factor authentication has expired. Please scan the QR code below using your mobile device camera to restore your corporate identity immediately."
+    })
+    assert resp.status_code == 200
+    data = resp.json()
+    indicator_ids = [ind["id"] for ind in data["risk_indicators"]]
+    assert "QUISHING_QR_CODE" in indicator_ids

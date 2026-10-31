@@ -3,6 +3,7 @@ import {
   Activity, 
   Globe, 
   Mail, 
+  Layers,
   ShieldAlert, 
   ShieldCheck, 
   BarChart3, 
@@ -125,7 +126,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ setActiveTab }) => {
       </div>
 
       {/* Quick Launch Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div 
           onClick={() => setActiveTab('url')}
           className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 cursor-pointer transition-all group relative overflow-hidden"
@@ -140,7 +141,25 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ setActiveTab }) => {
           </div>
           <h3 className="text-lg font-bold font-mono text-white mb-1">URL Threat Scanner</h3>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Local structural and lexical feature analysis without visiting the target. Identifies IP hosts, punycode homographs, credential traps, and brand impersonation.
+            Local structural & lexical analysis, What-If Counterfactual sandbox, and SOC safe defanging utility without network visits.
+          </p>
+        </div>
+
+        <div 
+          onClick={() => setActiveTab('bulk')}
+          className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all group relative overflow-hidden"
+        >
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800 flex items-center justify-center text-indigo-400 group-hover:scale-105 transition-transform">
+              <Layers className="w-6 h-6" />
+            </div>
+            <span className="flex items-center gap-1 text-xs font-mono text-indigo-400 group-hover:translate-x-1 transition-transform">
+              Launch Triage <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </div>
+          <h3 className="text-lg font-bold font-mono text-white mb-1">Bulk URL Triage</h3>
+          <p className="text-xs text-slate-400 leading-relaxed">
+            Batch triage of up to 100 suspicious URLs concurrently. Generates risk distribution analytics and RFC-compliant CSV reports.
           </p>
         </div>
 
@@ -158,7 +177,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ setActiveTab }) => {
           </div>
           <h3 className="text-lg font-bold font-mono text-white mb-1">Email NLP Scanner</h3>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Analyzes subject line and email body text via TF-IDF n-grams to detect psychological urgency, credential harvesting, wire fraud, and suspicious call-to-actions.
+            Analyzes text & EML files for Quishing (QR code traps), Executive BEC impersonation, payroll diversion, and credential urgency.
           </p>
         </div>
       </div>

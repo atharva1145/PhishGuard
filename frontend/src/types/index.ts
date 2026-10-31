@@ -80,6 +80,7 @@ export interface UrlScanResult {
   scan_id: string;
   scan_type: 'url';
   target: string;
+  defanged_target?: string;
   prediction: string;
   is_phishing: boolean;
   confidence_score: number;
@@ -94,6 +95,56 @@ export interface UrlScanResult {
   model_version: string;
   timestamp: string;
   disclaimer: string;
+}
+
+export interface DefangResponse {
+  raw_url: string;
+  defanged_url: string;
+  is_defanged: boolean;
+  soc_shareable_snippet: string;
+}
+
+export interface CounterfactualResult {
+  original_url: string;
+  original_probability: number;
+  original_prediction: string;
+  counterfactual_probability: number;
+  counterfactual_prediction: string;
+  probability_delta: number;
+  percent_reduction: number;
+  counterfactual_risk_level: 'High' | 'Medium' | 'Low';
+  verdict_flipped: boolean;
+  remediated_factors: string[];
+  narrative: string;
+  applied_modifications: Record<string, boolean>;
+}
+
+export interface BatchUrlScanItem {
+  scan_id: string;
+  target: string;
+  defanged_target: string;
+  prediction: string;
+  is_phishing: boolean;
+  confidence_score: number;
+  phishing_probability: number;
+  risk_level: 'High' | 'Medium' | 'Low';
+  target_brand?: string | null;
+  top_indicator?: string | null;
+}
+
+export interface BatchSummary {
+  total: number;
+  high_risk: number;
+  medium_risk: number;
+  low_risk: number;
+  phishing_count: number;
+  legitimate_count: number;
+}
+
+export interface BatchUrlScanResult {
+  summary: BatchSummary;
+  results: BatchUrlScanItem[];
+  timestamp: string;
 }
 
 export interface EmailScanResult {

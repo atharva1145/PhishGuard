@@ -102,6 +102,7 @@ class UrlScanResponse(BaseModel):
     scan_id: str
     scan_type: str = "url"
     target: str
+    defanged_target: Optional[str] = None
     prediction: str
     is_phishing: bool
     confidence_score: float
@@ -116,6 +117,70 @@ class UrlScanResponse(BaseModel):
     model_version: str
     timestamp: str
     disclaimer: str
+
+
+class DefangRequest(BaseModel):
+    url: str
+    action: str = Field("defang", description="'defang' or 'refang'")
+
+
+class DefangResponse(BaseModel):
+    raw_url: str
+    defanged_url: str
+    is_defanged: bool
+    soc_shareable_snippet: str
+
+
+class CounterfactualRequest(BaseModel):
+    url: str
+    modifications: Dict[str, bool] = Field(..., description="Mapping of toggle name to boolean state")
+
+
+class CounterfactualResponse(BaseModel):
+    original_url: str
+    original_probability: float
+    original_prediction: str
+    counterfactual_probability: float
+    counterfactual_prediction: str
+    probability_delta: float
+    percent_reduction: float
+    counterfactual_risk_level: str
+    verdict_flipped: bool
+    remediated_factors: List[str]
+    narrative: str
+    applied_modifications: Dict[str, bool]
+
+
+class BatchUrlScanRequest(BaseModel):
+    urls: List[str] = Field(..., min_length=1, max_length=100, description="List of URLs to analyze in batch")
+
+
+class BatchUrlScanItem(BaseModel):
+    scan_id: str
+    target: str
+    defanged_target: str
+    prediction: str
+    is_phishing: bool
+    confidence_score: float
+    phishing_probability: float
+    risk_level: str
+    target_brand: Optional[str] = None
+    top_indicator: Optional[str] = None
+
+
+class BatchSummarySchema(BaseModel):
+    total: int
+    high_risk: int
+    medium_risk: int
+    low_risk: int
+    phishing_count: int
+    legitimate_count: int
+
+
+class BatchUrlScanResponse(BaseModel):
+    summary: BatchSummarySchema
+    results: List[BatchUrlScanItem]
+    timestamp: str
 
 
 class EmailScanRequest(BaseModel):

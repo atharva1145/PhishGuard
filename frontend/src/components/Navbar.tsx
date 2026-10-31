@@ -3,6 +3,7 @@ import {
   ShieldAlert, 
   ShieldCheck, 
   Globe, 
+  Layers,
   Mail, 
   BarChart3, 
   History, 
@@ -22,6 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, health 
   const navItems = [
     { id: 'overview', label: 'Dashboard', icon: Activity },
     { id: 'url', label: 'URL Scanner', icon: Globe },
+    { id: 'bulk', label: 'Bulk Triage', icon: Layers },
     { id: 'email', label: 'Email Scanner', icon: Mail },
     { id: 'evaluation', label: 'Model Evaluation', icon: BarChart3 },
     { id: 'history', label: 'Scan History', icon: History },

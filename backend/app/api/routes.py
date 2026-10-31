@@ -11,13 +11,18 @@ from fastapi import APIRouter, HTTPException, Query, status, UploadFile, File
 
 from backend.app.schemas.scan import (
     UrlScanRequest, UrlScanResponse,
-    EmailScanRequest, EmailScanResponse
+    EmailScanRequest, EmailScanResponse,
+    DefangRequest, DefangResponse,
+    CounterfactualRequest, CounterfactualResponse,
+    BatchUrlScanRequest, BatchUrlScanResponse
 )
 from backend.app.schemas.models import HealthResponse, ModelMetadataResponse
 from backend.app.schemas.metrics import AllMetricsResponse
 from backend.app.schemas.history import HistoryListResponse, HistoryDeleteResponse
-from backend.app.services.url_scanner import execute_url_scan
+from backend.app.services.url_scanner import execute_url_scan, execute_batch_url_scan
 from backend.app.services.email_scanner import execute_email_scan, parse_and_scan_eml_file
+from ml.src.defang import analyze_and_defang, refang_url
+from ml.src.counterfactual import simulate_counterfactual_url
 from backend.app.services.model_service import (
     check_models_health, get_model_metadata, load_evaluation_report
 )
@@ -77,6 +82,72 @@ async def scan_url(payload: UrlScanRequest):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An error occurred while analyzing the URL: {str(e)}"
         )
+
+
+@router.post("/scan/url/counterfactual", response_model=CounterfactualResponse, tags=["Scanners", "Explainability"])
+async def scan_url_counterfactual(payload: CounterfactualRequest):
+    """
+    Performs interactive 'What-If' counterfactual explainability simulation.
+    Modifies candidate feature values and calculates probability shifts in real-time.
+    """
+    models_status = check_models_health()
+    if not models_status["url_classifier"]["ready"]:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="URL phishing classification model is not available."
+        )
+
+    try:
+        res = simulate_counterfactual_url(payload.url, payload.modifications)
+        return res
+    except Exception as e:
+        logger.error(f"Error during counterfactual simulation: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An error occurred during counterfactual analysis: {str(e)}"
+        )
+
+
+@router.post("/scan/url/batch", response_model=BatchUrlScanResponse, tags=["Scanners", "SOC Triage"])
+async def scan_url_batch(payload: BatchUrlScanRequest):
+    """
+    Performs bulk threat triage on up to 100 URLs in parallel.
+    Returns categorized risk distribution and triage table for SOC export.
+    """
+    models_status = check_models_health()
+    if not models_status["url_classifier"]["ready"]:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="URL phishing classification model is not available."
+        )
+
+    try:
+        res = execute_batch_url_scan(payload.urls)
+        return res
+    except Exception as e:
+        logger.error(f"Error during batch URL scan: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An error occurred during batch URL scan: {str(e)}"
+        )
+
+
+@router.post("/defang", response_model=DefangResponse, tags=["SOC Utilities"])
+async def defang_indicator(payload: DefangRequest):
+    """
+    Defangs or refangs an indicator string for safe sharing in tickets or chat.
+    """
+    action = payload.action.lower().strip()
+    if action == "refang":
+        refanged = refang_url(payload.url)
+        return {
+            "raw_url": refanged,
+            "defanged_url": payload.url,
+            "is_defanged": False,
+            "soc_shareable_snippet": f"[ACTIVE URL] {refanged}"
+        }
+    else:
+        return analyze_and_defang(payload.url)
 
 
 @router.post("/scan/email", response_model=EmailScanResponse, tags=["Scanners"])

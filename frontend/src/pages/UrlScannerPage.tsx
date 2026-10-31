@@ -18,6 +18,8 @@ import { UrlScanResult } from '../types';
 import { ExplanationCard } from '../components/ExplanationCard';
 import { FeatureImportanceChart } from '../components/FeatureImportanceChart';
 import { UrlVisualizer } from '../components/UrlVisualizer';
+import { CounterfactualSandbox } from '../components/CounterfactualSandbox';
+import { UrlDefangerCard } from '../components/UrlDefangerCard';
 import { DisclaimerBanner } from '../components/DisclaimerBanner';
 import { downloadForensicReport } from '../utils/forensicReport';
 
@@ -176,6 +178,9 @@ export const UrlScannerPage: React.FC = () => {
         <div className="space-y-8 animate-in fade-in duration-300">
           <UrlVisualizer tokens={result.syntax_tokens} rawUrl={result.target} />
 
+          {/* SOC Defanging & Safe Link Utility */}
+          <UrlDefangerCard currentUrl={result.target} currentDefanged={result.defanged_target} />
+
           {/* Brand Impersonation / Typosquatting Alert Card */}
           {result.brand_impersonation && (
             <div className="p-5 rounded-2xl bg-amber-950/40 border border-amber-800/80 shadow-lg shadow-amber-950/20 space-y-3 animate-in fade-in">
@@ -254,6 +259,13 @@ export const UrlScannerPage: React.FC = () => {
             timestamp={result.timestamp}
             disclaimerOrWarning={result.disclaimer}
             onExportReport={() => downloadForensicReport(result)}
+          />
+
+          {/* Interactive What-If Counterfactual Sandbox */}
+          <CounterfactualSandbox
+            originalUrl={result.target}
+            initialProbability={result.phishing_probability}
+            initialIsPhishing={result.is_phishing}
           />
 
           <FeatureImportanceChart
